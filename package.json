@@ -1,0 +1,62 @@
+{
+  "name": "@launchengine-dev/mcp",
+  "version": "0.0.3",
+  "mcpName": "io.github.Naman6019/launchengine-dev",
+  "description": "MCP server for LaunchEngine.dev: find public posts on Reddit, Hacker News and the web where someone is asking for a product like yours, scored 1-100 for buying intent, with reply drafts you review and post.",
+  "type": "module",
+  "license": "MIT",
+  "homepage": "https://launchengine.dev/docs/agents",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Naman6019/launchengine-mcp.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Naman6019/launchengine-mcp/issues"
+  },
+  "keywords": [
+    "mcp",
+    "mcp-server",
+    "model-context-protocol",
+    "claude",
+    "cursor",
+    "agents",
+    "intent-data",
+    "lead-generation",
+    "reddit",
+    "hacker-news",
+    "gtm"
+  ],
+  "bin": {
+    "launchengine-dev-mcp": "dist/cli.js"
+  },
+  "files": [
+    "dist/cli.js",
+    "README.md"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "bundle": "node scripts/bundle.mjs",
+    "prepublishOnly": "npm run build && npm run bundle",
+    "dev": "tsx watch src/main.ts",
+    "start": "node dist/main.js",
+    "test": "npm run build && npm run bundle && node --test test/*.test.mjs",
+    "typecheck": "tsc -p tsconfig.json --noEmit",
+    "mcpb": "node scripts/mcpb.mjs"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.18.2",
+    "zod": "^3.25.76"
+  },
+  "devDependencies": {
+    "@types/node": "^22.18.6",
+    "esbuild": "^0.28.2",
+    "tsx": "^4.20.6",
+    "typescript": "^5.9.3"
+  }
+}

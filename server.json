@@ -1,0 +1,39 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.Naman6019/launchengine-dev",
+  "title": "LaunchEngine.dev",
+  "description": "Find posts where someone is asking for a product like yours, scored 1-100, with reply drafts.",
+  "websiteUrl": "https://launchengine.dev/docs/agents",
+  "repository": {
+    "url": "https://github.com/Naman6019/launchengine-mcp",
+    "source": "github"
+  },
+  "version": "0.0.3",
+  "packages": [
+    {
+      "registryType": "npm",
+      "identifier": "@launchengine-dev/mcp",
+      "version": "0.0.3",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "LAUNCHENGINE_DEV_API_KEY",
+          "description": "Workspace API key (le_live_...). Create one at launchengine.dev under Dashboard > Agents.",
+          "isRequired": true,
+          "isSecret": true,
+          "format": "string"
+        },
+        {
+          "name": "LAUNCHENGINE_DEV_API_URL",
+          "description": "API base URL. Only set this when running the API yourself.",
+          "isRequired": false,
+          "isSecret": false,
+          "format": "string",
+          "default": "https://launchengine.dev/api"
+        }
+      ]
+    }
+  ]
+}
