@@ -152,7 +152,7 @@ stdin.
 
 ```
 $ npx -y @launchengine-dev/mcp
-[launchengine-dev-mcp] v0.0.3 ready on stdio (API: https://launchengine.dev/api). Key loaded.
+[launchengine-dev-mcp] v0.0.4 ready on stdio (API: https://launchengine.dev/api). Key loaded.
 ```
 
 If you do not see that line, the install failed. `--help` prints usage and

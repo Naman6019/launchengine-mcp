@@ -1,12 +1,12 @@
 import { z } from "zod";
-import { idSchema } from "./common.js";
+import { idSchema, planTypeSchema } from "./common.js";
 
 export const getCreditBalanceInputSchema = z.object({}).strict();
 
 export const getCreditBalanceOutputSchema = z.object({
   workspace_id: idSchema,
   balance: z.number().int().nonnegative(),
-  plan: z.enum(["free_trial", "radar", "radar_byok", "launch_pass"]),
+  plan: planTypeSchema,
 });
 export type GetCreditBalanceOutput = z.infer<
   typeof getCreditBalanceOutputSchema

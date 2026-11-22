@@ -1,6 +1,6 @@
 {
   "name": "@launchengine-dev/mcp",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "mcpName": "io.github.Naman6019/launchengine-dev",
   "description": "MCP server for LaunchEngine.dev: find public posts on Reddit, Hacker News and the web where someone is asking for a product like yours, scored 1-100 for buying intent, with reply drafts you review and post.",
   "type": "module",

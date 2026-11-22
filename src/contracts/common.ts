@@ -49,6 +49,7 @@ export type JobStatus = z.infer<typeof jobStatusSchema>;
 
 export const planTypeSchema = z.enum([
   "free_trial",
+  "solo",
   "radar",
   "radar_byok",
   "launch_pass",
